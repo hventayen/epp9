@@ -4,7 +4,17 @@
 
 bool CharLinkedList::checkList() {
   // COMPLETE THIS FOR PROBLEM 2
-  return true;// dummy value to stop warnings while doing Problem 3. Remove this line.
+  SNode *currentNode = head;
+  int count = 0;
+  while (currentNode != nullptr)
+  {
+    if (currentNode->elem != 'G' && currentNode->elem != 'A' && currentNode->elem != 'T' && currentNode->elem != 'C')
+    {
+      return false;
+    }
+    currentNode = currentNode->next;
+  }
+  return true;
 
 }
 
